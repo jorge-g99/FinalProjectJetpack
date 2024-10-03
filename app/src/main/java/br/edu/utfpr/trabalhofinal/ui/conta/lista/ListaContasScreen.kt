@@ -181,7 +181,7 @@ private fun List(
                     conta.valor
                 }
             Row(
-                modifier = Modifier.fillMaxWidth(),
+                modifier = Modifier.padding(8.dp).fillMaxWidth(),
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Icon(

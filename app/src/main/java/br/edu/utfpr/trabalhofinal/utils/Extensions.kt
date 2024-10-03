@@ -1,5 +1,7 @@
 package br.edu.utfpr.trabalhofinal.utils
 
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import br.edu.utfpr.trabalhofinal.data.Conta
 import br.edu.utfpr.trabalhofinal.data.TipoContaEnum
@@ -34,9 +36,12 @@ fun LocalDate.formatar(): String {
     return format(formatter)
 }
 
+@Composable
 fun BigDecimal.colorir(): Color {
     if (this < BigDecimal.ZERO) {
         return Color(0xFFCF5355)
+    } else if (this == BigDecimal.ZERO)  {
+        return MaterialTheme.colorScheme.secondary
     } else {
         return Color(0xFF00984E)
     }
